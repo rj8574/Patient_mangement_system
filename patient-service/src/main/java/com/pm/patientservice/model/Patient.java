@@ -11,7 +11,6 @@ import java.util.UUID;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Getter
 @Setter
 //@Table ( name = "Paitent")
@@ -32,7 +31,8 @@ public class Patient {
     @NonNull
     private LocalDate dateOfBirth;
     @NonNull
-    private LocalDate RegisterDate;
+    @Column(name = "registered_date")
+    private LocalDate registerDate;
 
 
 }

@@ -24,6 +24,7 @@ public class PatientMapper {
         patient.setAddress(patientRequestDTO.getAddress());
         patient.setEmail(patientRequestDTO.getEmail());
         patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
+        patient.setRegisterDate(LocalDate.parse(patientRequestDTO.getRegisteredDate()));
         return patient;
 
     }
