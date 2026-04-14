@@ -56,4 +56,11 @@ public class PatientService {
 
 
     }
+
+    public  void deletePatient (UUID id) {
+        Patient patient = patientRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Patient not found"));
+        patientRepository.deleteById(id);
+
+    }
 }
