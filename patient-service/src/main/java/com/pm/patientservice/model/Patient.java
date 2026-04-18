@@ -19,7 +19,6 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-
     @NonNull
     private String name;
     @NonNull
@@ -33,6 +32,56 @@ public class Patient {
     @NonNull
     @Column(name = "registered_date")
     private LocalDate registerDate;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public @NonNull String getName() {
+        return name;
+    }
+
+    public void setName(@NonNull String name) {
+        this.name = name;
+    }
+
+    public @NonNull String getEmail() {
+        return email;
+    }
+
+    public void setEmail(@NonNull String email) {
+        this.email = email;
+    }
+
+    public @NonNull String getAddress() {
+        return address;
+    }
+
+    public void setAddress(@NonNull String address) {
+        this.address = address;
+    }
+
+    public @NonNull LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(@NonNull LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public @NonNull LocalDate getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(@NonNull LocalDate registerDate) {
+        this.registerDate = registerDate;
+    }
+
+
 
 
 }
